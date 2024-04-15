@@ -7,7 +7,7 @@ export const config = createConfig({
   connectors: [
     injected(),
     coinbaseWallet({ appName: 'Create Wagmi' }),
-    walletConnect({ projectId: null }),
+    walletConnect({ projectId: process.env.NEXT_PUBLIC_WC_PROJECT_ID }),
   ],
   ssr: true,
   transports: {
